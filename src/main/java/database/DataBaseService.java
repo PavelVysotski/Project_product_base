@@ -1,5 +1,6 @@
 package database;
 
+import entity.Category;
 import entity.Product;
 
 import java.util.List;
@@ -16,9 +17,64 @@ public class DataBaseService {
         productBase.add(product);
     }
 
+    public static void updateAnyProduct(List<Product> productBase, long id) {
+        for (Product list : productBase) {
+            if (list.getId() == id) {
+                System.out.println(list);
+                System.out.println("Какой параметр вы хотите изменить?");
+            }
+        }
+    }
+
+    public static void updateAllData() {
+
+    }
+
     public static void showBase(List<Product> productBase) {
         for (Product list : productBase) {
             System.out.println(list);
         }
     }
+
+    public static void showBaseByCategory (List<Product> productBase, int choice){
+        boolean categoryLoop = true;
+        while (categoryLoop) {
+            switch (choice) {
+                case 1:
+                    Enum fruits = Category.ФРУКТЫ;
+                    for (Product list : productBase) {
+                        if (list.getCategory().equals(fruits)) {
+                            System.out.println(list);
+                        }
+                    }
+                    break;
+                case 2:
+                    Enum vegetables = Category.ОВОЩИ;
+                    for (Product list : productBase) {
+                        if (list.getCategory().equals(vegetables)) {
+                            System.out.println(list);
+                        }
+                    }
+                    break;
+                case 3:
+                    Enum berries = Category.ЯГОДЫ;
+                    for (Product list : productBase) {
+                        if (list.getCategory().equals(berries)) {
+                            System.out.println(list);
+                        }
+                    }
+                    break;
+                case 4:
+                    categoryLoop = false;
+                    break;
+                default:
+                    System.out.println("Такого варианта выбора нет, повторите его: ");
+            }
+        }
+    }
+
+//    public static int categoryChoice(List<Product> productBase, Category category) {
+//        if ()
+//
+//    }
 }

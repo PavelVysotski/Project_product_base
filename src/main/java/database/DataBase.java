@@ -9,6 +9,8 @@ import java.util.List;
 
 public class DataBase {
 
+   
+
     public static List<Product> createBase() {
         List<Product> productBase = new ArrayList<>();
         DataBaseService.addProduct(productBase, ProductService.createProduct(productBase, Category.ФРУКТЫ, "Апельсин", 5.59, 0.05, "Морокко"));
