@@ -2,9 +2,11 @@ package menu;
 
 import database.DataBase;
 import database.DataBaseService;
+import entity.Category;
 import entity.Product;
 import util.CommandReader;
 
+import java.util.Calendar;
 import java.util.List;
 
 public class MenuAction {
@@ -20,7 +22,8 @@ public class MenuAction {
                     DataBaseService.showBase(productBase);
                     break;
                 case 2:
-//                    DataBaseService.showBaseByCategory(productBase, );
+                    DataBaseService.showBaseByCategory(productBase);
+                    break;
                 case 3:
                     MenuText.menuChangeChoice();
                     break;
@@ -32,4 +35,5 @@ public class MenuAction {
             }
         }
     }
+
 }

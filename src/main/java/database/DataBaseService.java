@@ -2,6 +2,8 @@ package database;
 
 import entity.Category;
 import entity.Product;
+import menu.MenuText;
+import util.CommandReader;
 
 import java.util.List;
 
@@ -36,12 +38,14 @@ public class DataBaseService {
         }
     }
 
-    public static void showBaseByCategory (List<Product> productBase, int choice){
+    public static void showBaseByCategory(List<Product> productBase) {
         boolean categoryLoop = true;
         while (categoryLoop) {
+            MenuText.menuCategoryChoice();
+            int choice = CommandReader.readNumber("Сделайте свой выбор: ");
             switch (choice) {
                 case 1:
-                    Enum fruits = Category.ФРУКТЫ;
+                    Enum fruits = Category.ОВОЩИ;
                     for (Product list : productBase) {
                         if (list.getCategory().equals(fruits)) {
                             System.out.println(list);
@@ -49,7 +53,7 @@ public class DataBaseService {
                     }
                     break;
                 case 2:
-                    Enum vegetables = Category.ОВОЩИ;
+                    Enum vegetables = Category.ФРУКТЫ;
                     for (Product list : productBase) {
                         if (list.getCategory().equals(vegetables)) {
                             System.out.println(list);
@@ -72,9 +76,7 @@ public class DataBaseService {
             }
         }
     }
-
-//    public static int categoryChoice(List<Product> productBase, Category category) {
-//        if ()
-//
-//    }
 }
+
+
+

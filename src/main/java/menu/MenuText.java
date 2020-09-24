@@ -5,15 +5,20 @@ public class MenuText {
     public static void mainMenu (){
         System.out.println("Вы зашли в базу продуктов.");
         System.out.println("1. Показать весь список продуктов.");
-        System.out.println("2. Вывести список по типу продукта.");
+        System.out.println("2. Вывести список по категории продукта.");
         System.out.println("3. Внести изменение в список продуктов.");
         System.out.println("4. Выход из базы.");
-        System.out.println("Сделайте ваш выбор: ");
+
 
     }
 
     public static void menuCategoryChoice (){
-        System.out.println("");
+        System.out.println("По какой категории вывести список?");
+        System.out.println("1. Овощи.");
+        System.out.println("2. Фрукты.");
+        System.out.println("3. Ягоды.");
+        System.out.println("4. Вернуться в главное меню.");
+
     }
 
     public static void menuChangeChoice (){
