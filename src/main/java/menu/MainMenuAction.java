@@ -9,7 +9,7 @@ import util.CommandReader;
 import java.util.Calendar;
 import java.util.List;
 
-public class MenuAction {
+public class MainMenuAction {
 
     public static void worker() {
         boolean mainLoop = true;
@@ -25,7 +25,7 @@ public class MenuAction {
                     DataBaseService.showBaseByCategory(productBase);
                     break;
                 case 3:
-                    MenuText.menuChangeChoice();
+                    MenuChoiceAction.choiceAction(productBase);
                     break;
                 case 4:
                     mainLoop = false;
