@@ -6,6 +6,7 @@ import menu.MenuText;
 import util.CommandReader;
 
 import java.math.BigDecimal;
+import java.util.Iterator;
 import java.util.List;
 
 public class DataBaseService {
@@ -13,8 +14,13 @@ public class DataBaseService {
     public static void deleteProduct(List<Product> productBase) {
         System.out.println("---------------------");
         int id = CommandReader.readNumber("Введите номер продукта: ");
-        productBase.remove((id - 1));
-        System.out.println("---------------------");
+        Iterator<Product> productIterator = productBase.iterator();
+        while (productIterator.hasNext()) {
+            Product nextProduct = productIterator.next();
+            if (nextProduct.getId() == id) {
+                productIterator.remove();
+            }
+        }
     }
 
     public static void addProduct(List<Product> productBase, Product product) {
