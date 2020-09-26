@@ -3,7 +3,6 @@ package database;
 import entity.Category;
 import entity.Product;
 import menu.MenuText;
-import org.w3c.dom.ls.LSOutput;
 import util.CommandReader;
 
 import java.math.BigDecimal;
@@ -19,9 +18,7 @@ public class DataBaseService {
     }
 
     public static void addProduct(List<Product> productBase, Product product) {
-
         productBase.add(product);
-
     }
 
     public static void updateAnyProduct(List<Product> productBase) {
@@ -61,13 +58,9 @@ public class DataBaseService {
                         default:
                             System.out.println("Такого варианта выбора нет, повторите его: ");
                     }
-
                 }
-
             }
-
         }
-
     }
 
     public static void updateFromId(List<Product> productBase) {
@@ -142,7 +135,6 @@ public class DataBaseService {
         }
         System.out.println("---------------------");
     }
-
 }
 
 

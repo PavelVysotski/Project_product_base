@@ -9,7 +9,6 @@ public class MenuText {
         System.out.println("3. Добавить в список новый продукт.");
         System.out.println("4. Внести изменение в список продуктов.");
         System.out.println("5. Выход из базы.");
-
     }
 
     public static void menuCategoryChoice() {
@@ -18,7 +17,6 @@ public class MenuText {
         System.out.println("2. Фрукты.");
         System.out.println("3. Ягоды.");
         System.out.println("4. Вернуться в главное меню.");
-
     }
 
     public static void menuChangeChoice() {

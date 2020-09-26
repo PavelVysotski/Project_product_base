@@ -2,13 +2,10 @@ package menu;
 
 import database.DataBase;
 import database.DataBaseService;
-import entity.Category;
 import entity.Product;
 import entity.ProductService;
 import util.CommandReader;
 
-import java.sql.SQLException;
-import java.util.Calendar;
 import java.util.List;
 
 public class MainMenuAction {
@@ -47,5 +44,4 @@ public class MainMenuAction {
             }
         }
     }
-
 }
