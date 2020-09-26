@@ -27,11 +27,11 @@ public class DataBaseService {
     public static void updateAnyProduct(List<Product> productBase) {
         System.out.println("---------------------");
         int id = CommandReader.readNumber("Введите номер продукта: ");
-        boolean choiceLoop = true;
+        boolean updateLoop = true;
         for (Product product : productBase) {
             if (product.getId() == id) {
                 System.out.println(product);
-                while (choiceLoop) {
+                while (updateLoop) {
                     MenuText.menuAnyDataChange();
                     int choice = CommandReader.readNumber("Ваш выбор: ");
                     switch (choice) {
@@ -56,7 +56,7 @@ public class DataBaseService {
                             System.out.println(product);
                             break;
                         case 5:
-                            choiceLoop = false;
+                            updateLoop = false;
                             break;
                         default:
                             System.out.println("Такого варианта выбора нет, повторите его: ");
@@ -105,7 +105,7 @@ public class DataBaseService {
             switch (choice) {
                 case 1:
                     System.out.println("---------------------");
-                    Enum fruits = Category.ОВОЩИ;
+                    Category fruits = Category.ОВОЩИ;
                     for (Product list : productBase) {
                         if (list.getCategory().equals(fruits)) {
                             System.out.println(list);
@@ -115,7 +115,7 @@ public class DataBaseService {
                     break;
                 case 2:
                     System.out.println("---------------------");
-                    Enum vegetables = Category.ФРУКТЫ;
+                    Category vegetables = Category.ФРУКТЫ;
                     for (Product list : productBase) {
                         if (list.getCategory().equals(vegetables)) {
                             System.out.println(list);
@@ -125,7 +125,7 @@ public class DataBaseService {
                     break;
                 case 3:
                     System.out.println("---------------------");
-                    Enum berries = Category.ЯГОДЫ;
+                    Category berries = Category.ЯГОДЫ;
                     for (Product list : productBase) {
                         if (list.getCategory().equals(berries)) {
                             System.out.println(list);

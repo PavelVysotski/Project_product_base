@@ -24,6 +24,7 @@ public class MenuChoiceAction {
                     DataBaseService.updateAnyProduct(productBase);
                     break;
                 case 3:
+                    DataBaseService.showBase(productBase);
                     DataBaseService.deleteProduct(productBase);
                     DataBaseService.showBase(productBase);
                     break;

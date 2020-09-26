@@ -6,8 +6,9 @@ public class MenuText {
         System.out.println("Главное меню базы продуктов:");
         System.out.println("1. Показать весь список продуктов.");
         System.out.println("2. Вывести список по категории продукта.");
-        System.out.println("3. Внести изменение в список продуктов.");
-        System.out.println("4. Выход из базы.");
+        System.out.println("3. Добавить в список новый продукт.");
+        System.out.println("4. Внести изменение в список продуктов.");
+        System.out.println("5. Выход из базы.");
 
     }
 
