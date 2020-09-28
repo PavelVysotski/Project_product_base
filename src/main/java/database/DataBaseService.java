@@ -39,26 +39,32 @@ public class DataBaseService {
                     int choice = CommandReader.readNumber("Ваш выбор: ");
                     switch (choice) {
                         case 1:
+                            String categoryChoice = CommandReader.readString("Введите одну из категорий 'ФРУКТЫ, ОВОЩИ, ЯГОДЫ': ");
+                            categoryChoice = categoryChoice.toUpperCase();
+                            Category category = Category.valueOf(categoryChoice);
+                            product.setCategory(category);
+                            break;
+                        case 2:
                             String newName = CommandReader.readString("Введите новое название: ");
                             product.setName(newName);
                             System.out.println(product);
                             break;
-                        case 2:
+                        case 3:
                             double newPrice = CommandReader.readDouble("Введите новую цену: ");
                             product.setPrice(BigDecimal.valueOf(newPrice));
                             System.out.println(product);
                             break;
-                        case 3:
+                        case 4:
                             double newDiscount = CommandReader.readDouble("Введите новую скидку: ");
                             product.setDiscount(BigDecimal.valueOf(newDiscount));
                             System.out.println(product);
                             break;
-                        case 4:
+                        case 5:
                             String newDescription = CommandReader.readString("Введите новое описание: ");
                             product.setDescription(newDescription);
                             System.out.println(product);
                             break;
-                        case 5:
+                        case 6:
                             updateLoop = false;
                             break;
                         default:
@@ -74,6 +80,10 @@ public class DataBaseService {
         int id = CommandReader.readNumber("Введите номер продукта: ");
         for (Product product : productBase) {
             if (product.getId() == id) {
+                String categoryChoice = CommandReader.readString("Введите одну из категорий 'ФРУКТЫ, ОВОЩИ, ЯГОДЫ': ");
+                categoryChoice = categoryChoice.toUpperCase();
+                Category category = Category.valueOf(categoryChoice);
+                product.setCategory(category);
                 String newName = CommandReader.readString("Введите новое название: ");
                 product.setName(newName);
                 double newPrice = CommandReader.readDouble("Введите новую цену: ");

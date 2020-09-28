@@ -29,7 +29,7 @@ public class MainMenuAction {
                         DataBaseService.showBase(productBase);
                     } catch (IllegalArgumentException e) {
                         System.out.println("----------------");
-                        System.err.println("Введенная категория не существует, повторите процедуру снова: ");
+                        System.err.println("Не верно введены данные, повторите процедуру снова: ");
                     }
                     break;
                 case 4:

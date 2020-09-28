@@ -30,10 +30,11 @@ public class MenuText {
 
     public static void menuAnyDataChange() {
         System.out.println("Какое действие вы желаете сделать?");
-        System.out.println("1. Изменить наименование продукта.");
-        System.out.println("2. Изменить цену продукта.");
-        System.out.println("3. Изменить скидку продукта.");
-        System.out.println("4. Изменить описание продукта.");
-        System.out.println("5. Выход в предыдущее меню.");
+        System.out.println("1. Изменить категорию продукта.");
+        System.out.println("2. Изменить наименование продукта.");
+        System.out.println("3. Изменить цену продукта.");
+        System.out.println("4. Изменить скидку продукта.");
+        System.out.println("5. Изменить описание продукта.");
+        System.out.println("6. Выход в предыдущее меню.");
     }
 }
