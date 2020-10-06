@@ -19,11 +19,11 @@ public class DataWriter {
         return fileName;
     }
 
-    public void writeToFile(List<Product> productBsae) throws IOException {
+    public void writeToFile(List<Product> productBase) throws IOException {
         try (FileWriter writer = new FileWriter(fileName)) {
             writer.write(ProductTxtUtils.headers());
 
-            for (Product product : productBsae) {
+            for (Product product : productBase) {
                 writer.write(ProductTxtUtils.toTxtString(product));
             }
         }
