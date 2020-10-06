@@ -23,7 +23,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return "id: " + id + ", " + category + ": " + name + ", цена:" + price + ", скидка:" + discount + ", " + description;
+        return "id: " + id + ", " + category + ", " + name + ", цена:" + price + ", скидка:" + discount + ", " + description;
     }
 
     public long getId() {

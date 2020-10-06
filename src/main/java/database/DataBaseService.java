@@ -2,14 +2,44 @@ package database;
 
 import entity.Category;
 import entity.Product;
+import io.DataReader;
+import io.DataWriter;
+import io.IOConstants;
 import menu.MenuText;
 import util.CommandReader;
 
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.Iterator;
 import java.util.List;
 
 public class DataBaseService {
+
+
+    public static void writeObjectsToFile() {
+
+        List<Product> productBase = DataBase.createBase();
+
+        DataWriter dataWriter = new DataWriter(IOConstants.FILENAME);
+        try {
+            dataWriter.writeToFile(productBase);
+            System.out.println("Данные записаны в файл.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void readObjectsToFile() {
+        DataReader dataReader = new DataReader(IOConstants.FILENAME);
+        try {
+            List<Product> productBase = dataReader.readFromFile();
+            for (Product product : productBase){
+                System.out.println(product);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     public static void deleteProduct(List<Product> productBase) {
         System.out.println("---------------------");
